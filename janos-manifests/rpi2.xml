@@ -8,9 +8,10 @@
   <remote name="mozillaorg" fetch="https://git.mozilla.org/releases" />
   <remote name="apitrace" fetch="git://github.com/apitrace/" />
   <remote name="jan-os" fetch="git://github.com/jan-os/" />
-  <remote name="caf" fetch="git://codeaurora.org/"/>
 
-  <default revision="refs/tags/android-4.0.1_r1.1" remote="aosp" sync-j="8" />
+  <default revision="refs/tags/android-4.0.1_r1.1"
+           remote="aosp"
+           sync-j="8" />
 
   <project name="gecko-dev" path="gecko" remote="jan-os" revision="rpi"/>
   <project name="janos" path="gaia" remote="jan-os" revision="gpio"/>
@@ -28,7 +29,8 @@
 
   <!-- Stock Android things (more or less) -->
   <project path="abi/cpp" name="platform/abi/cpp" />
-  <project path="bionic" name="platform_bionic" />
+  <project path="bionic" name="platform_bionic"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
   <project path="bootable/recovery" name="platform/bootable/recovery" />
   <project path="device/common" name="device/common" />
   <project path="external/apriori" name="platform_external_apriori" remote="b2g" revision="master" />
@@ -77,39 +79,39 @@
   <project path="external/tinyalsa" name="platform/external/tinyalsa" />
   <project path="external/tremolo" name="platform/external/tremolo" />
   <project path="external/webp" name="platform/external/webp" />
-  <!--project path="external/webrtc" name="platform_external_webrtc"
-           remote="b2g" revision="bcm2835-4.0.1_r1.1" /-->
+  <project path="external/webrtc" name="platform_external_webrtc"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
   <project path="external/wpa_supplicant" name="platform/external/wpa_supplicant" />
   <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" />
   <project path="external/yaffs2" name="platform/external/yaffs2" />
   <project path="external/zlib" name="platform/external/zlib" />
-  <!--project path="frameworks/base" name="platform_frameworks_base"
-           remote="b2g" revision="bcm2835-4.0.1_r1.1"/-->
+  <project path="frameworks/base" name="platform_frameworks_base"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1"/>
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
   <project path="frameworks/support" name="platform/frameworks/support" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
-  <!--project path="hardware/libhardware" name="platform_hardware_libhardware"
-           remote="b2g" revision="bcm2835-4.0.1_r1.1" /-->
-  <!--project path="hardware/libhardware_legacy" name="platform_hardware_libhardware_legacy"
-           remote="b2g" revision="bcm2835-4.0.1_r1.1" /-->
+  <project path="hardware/libhardware" name="platform_hardware_libhardware"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
+  <project path="hardware/libhardware_legacy" name="platform_hardware_libhardware_legacy"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
   <project path="hardware/ril" name="platform/hardware/ril" />
   <project path="libcore" name="platform/libcore" />
   <project path="ndk" name="platform/ndk" />
   <project path="prebuilt" name="platform/prebuilt" />
   <!-- TODO: can we drop this? -->
   <project path="system/bluetooth" name="platform/system/bluetooth" />
-  <!--project path="system/core" name="platform_system_core"
-           remote="b2g" revision="bcm2835-4.0.1_r1.1" /-->
+  <project path="system/core" name="platform_system_core"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
   <project path="system/extras" name="platform/system/extras" />
   <project path="system/media" name="platform/system/media" />
-  <!--project path="system/netd" name="platform_system_netd"
-           remote="b2g" revision="bcm2835-4.0.1_r1.1" /-->
+  <project path="system/netd" name="platform_system_netd"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
   <project path="system/vold" name="platform/system/vold" />
 
   <!-- RPi2 things -->
   <project path="device/rpi2/rpi2" name="device-rpi2" remote="jan-os" revision="master" />
-  <!--project path="brcm_usrlib/dag" name="brcm_usrlib_dag"
-           remote="b2g" revision="bcm2835-4.0.1_r1.1" /-->
+  <project path="brcm_usrlib/dag" name="brcm_usrlib_dag"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
   <project path="hardware/realtek" name="platform_hardware_realtek"
            remote="b2g" revision="master" />
   <!-- TODO: kernel? -->
