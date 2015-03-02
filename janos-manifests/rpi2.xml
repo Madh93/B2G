@@ -8,6 +8,7 @@
   <remote name="mozillaorg" fetch="https://git.mozilla.org/releases" />
   <remote name="apitrace" fetch="git://github.com/apitrace/" />
   <remote name="jan-os" fetch="git://github.com/jan-os/" />
+  <remote fetch="git://codeaurora.org/" name="caf"/>
 
   <default revision="refs/tags/android-4.0.1_r1.1"
            remote="aosp"
@@ -97,7 +98,6 @@
   <project path="hardware/ril" name="platform/hardware/ril" />
   <project path="libcore" name="platform/libcore" />
   <project path="ndk" name="platform/ndk" />
-  <project path="prebuilt" name="platform/prebuilt" />
   <!-- TODO: can we drop this? -->
   <project path="system/bluetooth" name="platform/system/bluetooth" />
   <project path="system/core" name="platform_system_core"
@@ -107,6 +107,25 @@
   <project path="system/netd" name="platform_system_netd"
            remote="b2g" revision="bcm2835-4.0.1_r1.1" />
   <project path="system/vold" name="platform/system/vold" />
+
+  <!-- Some build shit -->
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="darwin" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="darwin" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7" path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="darwin" name="platform/prebuilts/gcc/darwin-x86/host/headers" path="prebuilts/gcc/darwin-x86/host/headers"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="darwin" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="darwin" name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7" path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.7"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="darwin" name="platform/prebuilts/python/darwin-x86/2.7.5" path="prebuilts/python/darwin-x86/2.7.5"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="linux" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="linux" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="linux,arm" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="linux,arm" name="platform/prebuilts/gcc/linux-x86/arm/ " path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="linux,x86" name="platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7" path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" groups="linux,x86" name="platform/prebuilts/python/linux-x86/2.7.5" path="prebuilts/python/linux-x86/2.7.5"/>
+  <project name="platform_prebuilts_misc" path="prebuilts/misc" remote="b2g" revision="b2g-4.4.2_r1"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" name="platform/prebuilts/ndk" path="prebuilts/ndk"/>
+  <project name="platform_prebuilts_qemu-kernel" path="prebuilts/qemu-kernel" remote="b2g" revision="b2g-4.4.2_r1"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" name="platform/prebuilts/sdk" path="prebuilts/sdk"/>
+  <project remote="caf" revision="LNX.LA.3.5.2.1.1" name="platform/prebuilts/tools" path="prebuilts/tools"/>
 
   <!-- RPi2 things -->
   <project path="device/rpi2/rpi2" name="device-rpi2" remote="jan-os" revision="master" />
